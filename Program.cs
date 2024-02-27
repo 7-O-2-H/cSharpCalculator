@@ -1,16 +1,18 @@
-﻿int num1;
-int num2;
+﻿// Initialize vars
+double num1;
+double num2;
 
 string answer;
 
-int result;
+double result;
 
+// Prompt user to input to numbers
 Console.WriteLine("Welcome to the C# Calculator App!");
 
 Console.WriteLine("Please enter your first number.");
 
 
-num1 = Convert.ToInt32(Console.ReadLine());
+num1 = Convert.ToDouble(Console.ReadLine());
 
 Console.Write("Your first number is: ");
 Console.Write(num1);
@@ -19,7 +21,7 @@ Console.WriteLine();
 
 Console.WriteLine("Please enter your second number.");
 
-num2 = Convert.ToInt32(Console.ReadLine());
+num2 = Convert.ToDouble(Console.ReadLine());
 
 Console.Write("Your second number is: ");
 Console.Write(num2);
@@ -31,6 +33,7 @@ Console.WriteLine("Enter a for addition, s for subtraction, m for multiplication
 
 answer = Console.ReadLine();
 
+// Perform the operation selected by the user
 if (answer == "a") 
 {
   result = num1 + num2;
@@ -49,8 +52,15 @@ else if (answer == "d")
 } 
 else 
 {
+  result = 0;
   Console.WriteLine("Invalid input.");
 }
 
-Console.WriteLine("The result is " + result);
+Console.Write("The result is ");
+Console.Write(result);
+Console.Write("!");
+
+Console.WriteLine();
+
+Console.WriteLine("Enter any key to exit program.");
 Console.ReadKey();
